@@ -1,7 +1,7 @@
 <template lang="pug">
   div.hello
     h1
-      | {{msg}}
+      |{{msg}}
     div
       el-button Button
 </template>
