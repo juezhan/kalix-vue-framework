@@ -1,9 +1,9 @@
-<template lang="pug">
-  div.hello
-    h1
-      |{{msg}}
-    div
-      el-button Button
+<template>
+  <div class="hello"></div>
+    <h1>{{msg}}</h1>
+    <div>
+      <el-button>Button</el-button>
+    </div>
 </template>
 
 <script>
