@@ -31,13 +31,13 @@ module.exports = {
       return templateVersion
     },
   },
-
+  
   prompts: {
     name: {
       when: 'isNotTest',
       type: 'string',
       required: true,
-      message: 'Project name 1',
+      message: 'Project name 2',
     },
     description: {
       when: 'isNotTest',
