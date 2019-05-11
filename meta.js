@@ -37,7 +37,7 @@ module.exports = {
       when: 'isNotTest',
       type: 'string',
       required: true,
-      message: 'Project name 8',
+      message: 'Project name 10',
     },
     description: {
       when: 'isNotTest',
@@ -73,6 +73,33 @@ module.exports = {
       when: 'isNotTest',
       type: 'confirm',
       message: 'Install vue-router?',
+    },
+    css: {
+      when: 'isNotTest',
+      type: 'list',
+      message: 'CSS Pre-processors?',
+      choices: [
+        {
+          name: 'Stylus',
+          value: 'stylus',
+          short: 'stylus',
+        },
+        {
+          name: 'SASS/SCSS',
+          value: 'scss',
+          short: 'scss',
+        },
+        {
+          name: 'LESS',
+          value: 'less',
+          short: 'less',
+        },
+      ]
+    },
+    vuex: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install vuex?'
     },
     lint: {
       when: 'isNotTest',
