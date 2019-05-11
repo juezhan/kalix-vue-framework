@@ -200,12 +200,12 @@ module.exports = {
     'src/router/**/*': 'router',
   },
   complete: function (data, {chalk}) {
+    console.log('cwd:2', cwd)
     const green = chalk.green
 
     sortDependencies(data, green)
 
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
-    console.log('cwd:', cwd)
     if (data.autoInstall) {
       installDependencies(cwd, data.autoInstall, green)
         .then(() => {
