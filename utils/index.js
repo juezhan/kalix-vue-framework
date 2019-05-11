@@ -10,6 +10,7 @@ const lintStyles = ['standard', 'airbnb']
  * @param {object} data Data from questionnaire
  */
 exports.sortDependencies = function sortDependencies(data) {
+  console.log('cwd:1', data)
   const packageJsonFile = path.join(
     data.inPlace ? '' : data.destDirName,
     'package.json'
