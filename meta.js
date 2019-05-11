@@ -37,7 +37,7 @@ module.exports = {
       when: 'isNotTest',
       type: 'string',
       required: true,
-      message: 'Project name 7',
+      message: 'Project name 8',
     },
     description: {
       when: 'isNotTest',
