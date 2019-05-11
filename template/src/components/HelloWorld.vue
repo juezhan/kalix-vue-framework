@@ -1,9 +1,7 @@
-<template>
-  <div class="hello"></div>
-    <h1>{{msg}}</h1>
-    <div>
-      <el-button>Button</el-button>
-    </div>
+<template lang="pug">
+  div.hello
+    h1 \{{ msg }}
+    el-button Element Ui
 </template>
 
 <script>
@@ -11,27 +9,37 @@ export default {
   name: 'HelloWorld',
   data() {
     return {
-      msg: 'Welcome to Your kalix-vue-framework App'
+      msg: 'Welcome to Your Vue.js App'
     }
-  },
-  mounted() {
   }
 }
 </script>
 
-<style scoped lang="stylus">
-  h1, h2
-    font-weight normal
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+{{#css "scss"}}
+<!-- scss -->
+{{else "less"}}
+<!-- less -->
+{{else "stylus"}}
+<!-- stylus -->
+{{/css}}
 
-  ul
-    list-style-type none
-    padding 0
+<style scoped type="text/stylus">
+  h1, h2 {
+    font-weight: normal;
+  }
 
-  li
-    display inline-block
-    margin 0 10px
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-  a
-    color #42b983
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
+  a {
+    color: #42b983;
+  }
 </style>

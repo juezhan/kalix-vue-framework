@@ -1,11 +1,8 @@
+node_modules
 .DS_Store
-node_modules/
-/dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-/template/node_modules/
-# Editor directories and files
+docs/_book
+test/
+
 .idea
 .vscode
 *.suo
