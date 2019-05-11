@@ -76,7 +76,7 @@ module.exports = {
     },
     css: {
       when: 'isNotTest',
-      type: 'confirm',
+      type: 'list',
       message: 'CSS Pre-processors?',
       choices: [
         {
