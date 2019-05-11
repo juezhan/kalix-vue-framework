@@ -65,10 +65,11 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
  * Prints the final message with instructions of necessary next steps.
  * @param {Object} data Data from questionnaire.
  */
-exports.printMessage = function printMessage(data, { green, yellow }) {
+exports.printMessage = function printMessage(data, {green, yellow, red}) {
   const message = `
 # ${green('Project initialization finished!')}
 # ========================
+# ${red('My Message!')}
 
 To get started:
 
@@ -78,7 +79,7 @@ To get started:
     )}${lintMsg(data)}npm run dev`
   )}
   
-Documentation can be found at https://vuejs-templates.github.io/webpack
+Documentation can be found at https://github.com/juezhan/kalix-vue-framework
 `
   console.log(message)
 }
@@ -90,8 +91,8 @@ Documentation can be found at https://vuejs-templates.github.io/webpack
  */
 function lintMsg(data) {
   return !data.autoInstall &&
-    data.lint &&
-    lintStyles.indexOf(data.lintConfig) !== -1
+  data.lint &&
+  lintStyles.indexOf(data.lintConfig) !== -1
     ? 'npm run lint -- --fix (or for yarn: yarn run lint --fix)\n  '
     : ''
 }

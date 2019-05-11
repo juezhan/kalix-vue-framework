@@ -18,7 +18,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 {{#if_eq css "scss"}}
-<style scoped type="text/scss">
+<style scoped lang="scss" rel="stylesheet/scss">
   h1, h2 {
     font-weight: normal;
   }
@@ -39,7 +39,7 @@ export default {
 </style>
 {{/if_eq}}
 {{#if_eq css "less"}}
-<style scoped type="text/less">
+<style scoped lang="less" rel="stylesheet/less">
   h1, h2 {
     font-weight: normal;
   }
@@ -60,7 +60,7 @@ export default {
 </style>
 {{/if_eq}}
 {{#if_eq css "stylus"}}
-<style scoped type="text/stylus">
+<style scoped lang="stylus" rel="stylesheet/stylus">
   h1, h2
     font-weight normal
 
