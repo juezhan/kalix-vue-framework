@@ -11,7 +11,7 @@ const pkg = require('./package.json')
 
 const templateVersion = pkg.version
 
-const {addTestAnswers} = require('./scenarios')
+const { addTestAnswers } = require('./scenarios')
 
 module.exports = {
   metalsmith: {
@@ -37,7 +37,7 @@ module.exports = {
       when: 'isNotTest',
       type: 'string',
       required: true,
-      message: 'Project name',
+      message: 'Project name 1',
     },
     description: {
       when: 'isNotTest',
@@ -73,33 +73,6 @@ module.exports = {
       when: 'isNotTest',
       type: 'confirm',
       message: 'Install vue-router?',
-    },
-    css: {
-      when: 'isNotTest',
-      type: 'list',
-      message: 'CSS Pre-processors?',
-      choices: [
-        {
-          name: 'SASS/SCSS',
-          value: 'scss',
-          short: 'scss',
-        },
-        {
-          name: 'LESS',
-          value: 'less',
-          short: 'less',
-        },
-        {
-          name: 'Stylus',
-          value: 'stylus',
-          short: 'stylus',
-        },
-      ]
-    },
-    vuex: {
-      when: 'isNotTest',
-      type: 'confirm',
-      message: 'Install vuex?'
     },
     lint: {
       when: 'isNotTest',
@@ -188,24 +161,23 @@ module.exports = {
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
     'config/test.env.js': 'unit || e2e',
-    'build/webpack.test.conf.js': 'unit && runner === \'karma\'',
+    'build/webpack.test.conf.js': "unit && runner === 'karma'",
     'test/unit/**/*': 'unit',
-    'test/unit/index.js': 'unit && runner === \'karma\'',
-    'test/unit/jest.conf.js': 'unit && runner === \'jest\'',
-    'test/unit/karma.conf.js': 'unit && runner === \'karma\'',
-    'test/unit/specs/index.js': 'unit && runner === \'karma\'',
-    'test/unit/setup.js': 'unit && runner === \'jest\'',
+    'test/unit/index.js': "unit && runner === 'karma'",
+    'test/unit/jest.conf.js': "unit && runner === 'jest'",
+    'test/unit/karma.conf.js': "unit && runner === 'karma'",
+    'test/unit/specs/index.js': "unit && runner === 'karma'",
+    'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
-    'src/store/**/*': 'vuex',
     'src/router/**/*': 'router',
   },
-  complete: function (data, {chalk}) {
-    console.log('cwd:2', cwd)
+  complete: function(data, { chalk }) {
     const green = chalk.green
 
     sortDependencies(data, green)
 
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
+
     if (data.autoInstall) {
       installDependencies(cwd, data.autoInstall, green)
         .then(() => {
