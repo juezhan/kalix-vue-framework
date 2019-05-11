@@ -37,7 +37,7 @@ module.exports = {
       when: 'isNotTest',
       type: 'string',
       required: true,
-      message: 'Project name 15',
+      message: 'Project name 16',
     },
     description: {
       when: 'isNotTest',
@@ -93,6 +93,11 @@ module.exports = {
           name: 'LESS',
           value: 'less',
           short: 'less',
+        },
+        {
+          name: 'none (configure it yourself)',
+          value: 'none',
+          short: 'none',
         },
       ]
     },

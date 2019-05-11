@@ -18,14 +18,66 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 {{#if_eq css "scss"}}
-<!-- scss -->
+<style scoped type="text/scss">
+  h1, h2 {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: #42b983;
+  }
+</style>
 {{/if_eq}}
 {{#if_eq css "less"}}
-<!-- less -->
+<style scoped type="text/less">
+  h1, h2 {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: #42b983;
+  }
+</style>
 {{/if_eq}}
 {{#if_eq css "stylus"}}
-<!-- stylus -->
+<style scoped type="text/stylus">
+  h1, h2
+    font-weight normal
+
+  ul
+    list-style-type none
+    padding 0
+
+  li
+    display inline-block
+    margin 0 10px
+
+  a
+    color #42b983
+
+</style>
 {{/if_eq}}
+{{#if_eq css "none"}}
 <style scoped>
   h1, h2 {
     font-weight: normal;
@@ -45,3 +97,4 @@ export default {
     color: #42b983;
   }
 </style>
+{{/if_eq}}
